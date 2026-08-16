@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AMP44 Estations LLP</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #050505;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      min-height: 90vh;
+      border: 1px solid #333;
+      border-radius: 28px;
+      padding: 55px;
+      position: relative;
+      overflow: hidden;
+      background: #080808;
+      box-shadow: 0 0 60px rgba(183, 255, 0, 0.05);
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: #b7ff00;
+      opacity: 0.04;
+      border-radius: 50%;
+      right: -200px;
+      top: -200px;
+    }
+
+    .logo {
+      font-size: 64px;
+      font-weight: 900;
+      font-style: italic;
+      letter-spacing: -5px;
+    }
+
+    .logo span {
+      color: #b7ff00;
+    }
+
+    .tagline {
+      margin-top: 8px;
+      color: #aaa;
+      letter-spacing: 4px;
+      font-size: 11px;
+    }
+
+    .tagline span {
+      color: #b7ff00;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-top: 65px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 6vw, 72px);
+      line-height: 0.95;
+      margin-bottom: 25px;
+      letter-spacing: -3px;
+    }
+
+    h1 span {
+      color: #b7ff00;
+    }
+
+    .description {
+      color: #aaa;
+      font-size: 18px;
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 30px;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .service {
+      border: 1px solid rgba(183,255,0,.35);
+      color: #ddd;
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      background: rgba(183,255,0,.04);
+    }
+
+    .illustration {
+      width: 100%;
+      border-radius: 20px;
+      display: block;
+    }
+
+    .contact {
+      margin-top: 45px;
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    .contact a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #b7ff00;
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #555;
+      font-size: 12px;
+    }
+
+    @media (max-width: 750px) {
+      .container {
+        padding: 35px 25px;
+      }
+
+      .logo {
+        font-size: 48px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        margin-top: 45px;
+      }
+
+      .illustration {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      AMP<span>44</span>
+    </div>
+
+    <div class="tagline">
+      FAST <span>•</span> RELIABLE <span>•</span> CONVENIENT
+    </div>
+
+    <div class="content">
+
+      <div>
+        <h1>
+          Something<br>
+          <span>powerful</span><br>
+          is coming.
+        </h1>
+
+        <p class="description">
+          AMP44 Estations LLP is building the next step in
+          convenient electric mobility. Our website is currently
+          under construction. Please check back soon.
+        </p>
+
+        <div class="services">
+          <div class="service">EV Charging</div>
+          <div class="service">Mobility Solutions</div>
+          <div class="service">Energy Infrastructure</div>
+          <div class="service">Cafe</div>
+        </div>
+
+        <div class="contact">
+          <a href="mailto:jay@amp44.in">
+            jay@amp44.in
+          </a>
+        </div>
+
+      </div>
+
+      <div>
+        <img
+          src="amp44-under-construction.png"
+          alt="AMP44 EV charging station under construction"
+          class="illustration"
+        >
+      </div>
+
+    </div>
+
+    <footer>
+      © 2026 AMP44 Estations LLP. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+</html>
