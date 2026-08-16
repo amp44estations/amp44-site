@@ -1,222 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>AMP44 Estations LLP</title>
+<title>AMP44 Estations LLP</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      background: #050505;
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+body {
+  margin: 0;
+  background: #050505;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      min-height: 90vh;
-      border: 1px solid #333;
-      border-radius: 28px;
-      padding: 55px;
-      position: relative;
-      overflow: hidden;
-      background: #080808;
-      box-shadow: 0 0 60px rgba(183, 255, 0, 0.05);
-    }
+.container {
+  width: 92%;
+  max-width: 1400px;
+  margin: auto;
+}
 
-    .container::before {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: #b7ff00;
-      opacity: 0.04;
-      border-radius: 50%;
-      right: -200px;
-      top: -200px;
-    }
+/* HEADER */
 
-    .logo {
-      font-size: 64px;
-      font-weight: 900;
-      font-style: italic;
-      letter-spacing: -5px;
-    }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+}
 
-    .logo span {
-      color: #b7ff00;
-    }
+.logo {
+  font-size: 52px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -4px;
+}
 
-    .tagline {
-      margin-top: 8px;
-      color: #aaa;
-      letter-spacing: 4px;
-      font-size: 11px;
-    }
+.logo span {
+  color: #9cff00;
+}
 
-    .tagline span {
-      color: #b7ff00;
-    }
+.logo small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin-left: 5px;
+  margin-top: -8px;
+  font-style: normal;
+}
 
-    .content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-      margin-top: 65px;
-    }
+nav {
+  display: flex;
+  gap: 28px;
+}
 
-    h1 {
-      font-size: clamp(42px, 6vw, 72px);
-      line-height: 0.95;
-      margin-bottom: 25px;
-      letter-spacing: -3px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    h1 span {
-      color: #b7ff00;
-    }
+nav a:hover {
+  color: #9cff00;
+}
 
-    .description {
-      color: #aaa;
-      font-size: 18px;
-      line-height: 1.7;
-      max-width: 520px;
-      margin-bottom: 30px;
-    }
+/* HERO */
 
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.hero {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 0 60px;
+}
 
-    .service {
-      border: 1px solid rgba(183,255,0,.35);
-      color: #ddd;
-      padding: 10px 15px;
-      border-radius: 30px;
-      font-size: 13px;
-      background: rgba(183,255,0,.04);
-    }
+.hero h1 {
+  font-size: clamp(55px, 7vw, 100px);
+  line-height: .92;
+  letter-spacing: -5px;
+  margin: 0;
+}
 
-    .illustration {
-      width: 100%;
-      border-radius: 20px;
-      display: block;
-    }
+.green {
+  color: #9cff00;
+}
 
-    .contact {
-      margin-top: 45px;
-      color: #aaa;
-      font-size: 15px;
-    }
+.line {
+  width: 55px;
+  height: 3px;
+  background: #9cff00;
+  margin: 28px 0;
+}
 
-    .contact a {
-      color: white;
-      text-decoration: none;
-    }
+.hero p {
+  color: #bdbdbd;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 550px;
+}
 
-    .contact a:hover {
-      color: #b7ff00;
-    }
+.hero-image img {
+  width: 100%;
+  display: block;
+  border-radius: 25px;
+}
 
-    footer {
-      margin-top: 35px;
-      color: #555;
-      font-size: 12px;
-    }
+/* SERVICES */
 
-    @media (max-width: 750px) {
-      .container {
-        padding: 35px 25px;
-      }
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
 
-      .logo {
-        font-size: 48px;
-      }
+.service {
+  border: 1px solid #557d00;
+  border-radius: 30px;
+  padding: 10px 17px;
+  color: white;
+  font-size: 14px;
+}
 
-      .content {
-        grid-template-columns: 1fr;
-        margin-top: 45px;
-      }
+/* EMAIL */
 
-      .illustration {
-        margin-top: 10px;
-      }
-    }
-  </style>
+.email {
+  display: inline-block;
+  margin-top: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.email:hover {
+  color: #9cff00;
+}
+
+/* FEATURES */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  padding: 30px 0;
+}
+
+.feature {
+  padding: 0 25px;
+  border-right: 1px solid #222;
+}
+
+.feature:first-child {
+  padding-left: 0;
+}
+
+.feature:last-child {
+  border-right: none;
+}
+
+.feature h3 {
+  color: #9cff00;
+  font-size: 16px;
+}
+
+.feature p {
+  color: #999;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  color: #888;
+  padding: 35px 0;
+  font-size: 13px;
+}
+
+.footer-logo {
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+  color: white;
+}
+
+.footer-logo span {
+  color: #9cff00;
+}
+
+/* MOBILE */
+
+@media(max-width: 900px) {
+
+  header {
+    display: block;
+  }
+
+  nav {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    order: 2;
+  }
+
+  .features {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature {
+    margin-bottom: 20px;
+  }
+}
+
+@media(max-width: 600px) {
+
+  .logo {
+    font-size: 42px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+    letter-spacing: -3px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .feature,
+  .feature:first-child {
+    padding: 15px 0;
+    border-right: none;
+    border-bottom: 1px solid #222;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <div class="logo">
-      AMP<span>44</span>
+<header>
+
+  <div class="logo">
+    AMP<span>44</span>
+    <small>ESTATIONS LLP</small>
+  </div>
+
+  <nav>
+    <a href="#ev">⚡ EV CHARGING</a>
+    <a href="#mobility">🚗 MOBILITY SOLUTIONS</a>
+    <a href="#energy">🔋 ENERGY INFRASTRUCTURE</a>
+    <a href="#cafe">☕ CAFE</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div>
+
+    <h1>
+      Something<br>
+      <span class="green">powerful</span><br>
+      is coming.
+    </h1>
+
+    <div class="line"></div>
+
+    <p>
+      AMP44 Estations LLP is building the next step
+      in convenient electric mobility. Our website is
+      currently under construction. Please check back soon.
+    </p>
+
+    <div class="services">
+      <div class="service">⚡ EV Charging</div>
+      <div class="service">🚗 Mobility Solutions</div>
+      <div class="service">🔋 Energy Infrastructure</div>
+      <div class="service">☕ Cafe</div>
     </div>
 
-    <div class="tagline">
-      FAST <span>•</span> RELIABLE <span>•</span> CONVENIENT
-    </div>
-
-    <div class="content">
-
-      <div>
-        <h1>
-          Something<br>
-          <span>powerful</span><br>
-          is coming.
-        </h1>
-
-        <p class="description">
-          AMP44 Estations LLP is building the next step in
-          convenient electric mobility. Our website is currently
-          under construction. Please check back soon.
-        </p>
-
-        <div class="services">
-          <div class="service">EV Charging</div>
-          <div class="service">Mobility Solutions</div>
-          <div class="service">Energy Infrastructure</div>
-          <div class="service">Cafe</div>
-        </div>
-
-        <div class="contact">
-          <a href="mailto:jay@amp44.in">
-            jay@amp44.in
-          </a>
-        </div>
-
-      </div>
-
-      <div>
-        <img
-          src="amp44-under-construction-new.png"
-          alt="AMP44 EV charging station under construction"
-          class="illustration"
-        >
-      </div>
-
-    </div>
-
-    <footer>
-      © 2026 AMP44 Estations LLP. All rights reserved.
-    </footer>
+    <a class="email" href="mailto:jay@amp44.in">
+      ✉ jay@amp44.in
+    </a>
 
   </div>
+
+
+  <div class="hero-image">
+    <img src="amp44-hero.png"
+         alt="AMP44 EV charging station">
+  </div>
+
+</section>
+
+
+<section class="features">
+
+  <div class="feature" id="ev">
+    <h3>⚡ EV CHARGING</h3>
+    <p>
+      Reliable and fast charging solutions
+      for a cleaner and greener tomorrow.
+    </p>
+  </div>
+
+  <div class="feature" id="mobility">
+    <h3>🚗 MOBILITY SOLUTIONS</h3>
+    <p>
+      Smart mobility solutions designed
+      for the future of transportation.
+    </p>
+  </div>
+
+  <div class="feature" id="energy">
+    <h3>🔋 ENERGY INFRASTRUCTURE</h3>
+    <p>
+      Powering communities with sustainable
+      and future-ready energy.
+    </p>
+  </div>
+
+  <div class="feature" id="cafe">
+    <h3>☕ CAFE</h3>
+    <p>
+      Great coffee. Good energy.
+      Better conversations.
+    </p>
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="footer-logo">
+    AMP<span>44</span>
+  </div>
+
+  <p>
+    Building a better, greener and smarter future for mobility.
+  </p>
+
+  <p>
+    © 2026 AMP44 Estations LLP. All Rights Reserved.
+  </p>
+
+</footer>
+
+</div>
 
 </body>
 </html>
